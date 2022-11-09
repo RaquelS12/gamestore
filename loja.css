@@ -1,0 +1,55 @@
+.hidden{
+    display: none;
+}
+
+.flex-container-products{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 97, 28);
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+}
+
+.flex-container-products > div  {
+    background-color: #e4d231;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 100%;
+}
+.flex-container-product{
+    display: flex;
+    background-color: rgb(19, 44, 184);
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+}
+
+.flex-container-product > div  {
+    background-color: #3bbbe2;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 100%;
+}
+
+.icon {
+    cursor: pointer;
+    width: 50px;
+}
+
+.button {
+    border: solid 1px black;
+    padding:5px;
+    margin: 10px;
+    
+}
+
+.button:hover{ 
+    cursor:pointer;
+}
+
+.title{
+    font-weight: bolder;
+}
