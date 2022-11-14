@@ -10,7 +10,7 @@
         require("config.php");
         $username = $_POST["username"];
         $password = $_POST["password"];
-        $sql="select * from login where username='$username' and password='$password'";
+        $sql="select * from user where username='$username' and password='$password'";
         echo $sql;
         $result=$conn->query($sql);
 

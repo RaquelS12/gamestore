@@ -18,14 +18,14 @@ if (!empty($_POST["username"]))
       exit;
    }
     
-    $result=$conn->query("select * from login where username='$username'");
+    $result=$conn->query("select * from user where username='$username'");
 
         if($result->num_rows>0){
             echo "<p>username já existe! tente outro.</p>";
             exit;
         }
 
-       $sql="insert into login(username,password) 
+       $sql="insert into user(username,password) 
        values('$username','$password')";
        //echo $sql;
        $conn->query($sql);
