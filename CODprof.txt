@@ -1,0 +1,49 @@
+// adicionar ao carrinho de compras, se tivermos o parâmetro url adicionar com o id do produto!
+// index.php?opcao=produtos&adicionar=24
+if (!empty($_GET['adicionar']))
+{
+    $idproduto = $_GET["adicionar"];
+    if (isset($_SESSION["carrinho"][$idproduto]))
+      $_SESSION["carrinho"][$idproduto]['qty']++;
+    else
+      $_SESSION["carrinho"][$idproduto]['qty']=1;
+}
+
+// listar o carrinho compras
+echo "<hr>";
+if (!empty($_SESSION["carrinho"]))
+{
+   foreach($_SESSION["carrinho"] as $key=>$value)
+   {
+       echo "idproduto: $key | ". $value['qty']." unidade(s)<br>";
+       //echo "idproduto: $key | ". $_SESSION["carrinho"][$key]['qty']." unidade(s)";
+   }
+}
+
+Carrinho php
+<?php
+
+$total=0;
+foreach($_SESSION["carrinho"] as $key=>$value){
+
+    echo "<div>";
+    echo $_SESSION["carrinho"][$key]["nome"]." | ";
+    echo $_SESSION["carrinho"][$key]["qty"]." unidade(s) | ";
+    echo $_SESSION["carrinho"][$key]["preco"]."€";
+    echo " | ";
+    echo "<img src='{$_SESSION["carrinho"][$key]["imagem_url"]}' width='50'> ";
+    echo ($_SESSION["carrinho"][$key]["qty"]*$_SESSION["carrinho"][$key]["preco"])."€";
+    echo "</div>";
+
+    $total+= $_SESSION["carrinho"][$key]["qty"]*$_SESSION["carrinho"][$key]["preco"];
+}
+
+echo "<mark>total: $total €</mark>";
+?>
+
+adicionar ao produto
+       $produtos[$id]=array("nome"=>$registo["produto"],
+                          "preco"=>$registo["preco"],
+                          "imagem_url"=>$registo["imagem_url"]);
+                          
+       $_SESSION["carrinho"][$key]["imagem_url"] = $produtos[$key]["imagem_url"];
