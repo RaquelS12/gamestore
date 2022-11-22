@@ -18,7 +18,7 @@
 
 .icon {
     cursor: pointer;
-    width: 50px;
+    width: 25px;
 }
 
 .button {
@@ -34,4 +34,25 @@
 
 .title{
     font-weight: bolder;
+}
+
+.product-list-item, 
+.catagory-list-item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 5px; 
+    border-top: 1px solid;
+    list-style-type: none;
+}
+
+.product-list-item-text, 
+.catagory-list-item-text{
+    width: 65%;
+}
+
+ul{
+    margin: 10px;
+    margin-top: 40px;
+    padding: 0;
 }

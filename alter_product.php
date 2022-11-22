@@ -1,7 +1,7 @@
 <?php
     include("config.php");
     if(empty($_GET["id"])){
-    //    header("location: adminPage.php");
+        header("location: index.php?opcao=adminPage");
     }
 
     $id = $_GET["id"];
@@ -39,6 +39,6 @@
         echo "$sql";
         $conn->query($sql);
         $conn->close();
-        header("location: adminPage.php?opcao=adminPage");
+        header("location: index.php?opcao=adminPage");
     }
 ?>

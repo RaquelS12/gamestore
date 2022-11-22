@@ -10,14 +10,14 @@
         $idcategory = $entry["idcategoryFK"];
         $namecategory = $entry["category"];
 
-        echo "<li>";
-        echo "id:$idproduct nome:$product price:$price stock:$stock categoria:$namecategory";
-        echo "<a href='delete_product.php?id=$idproduct'>";
-        echo "<img src='delete.png' class='icon'  onclick='confirmMsg($idproduct)'>";
+        echo "<li class='product-list-item'>";
+        echo "<div class='product-list-item-text'>id:$idproduct nome:$product price:$price stock:$stock categoria:$namecategory </div>";
+        echo "<div class='product-list-item-icons'><a href='delete_product.php?id=$idproduct'>";
+        echo "<img src='delete.png' class='icon' onclick='confirmMsg($idproduct)'>";
         echo "</a>";
         echo "<a href='alter_product.php?id=$idproduct'>";
         echo "<img src='edit.png' class='icon'>";
-        echo "</a>";
+        echo "</a></div>";
         echo "</li>";
          //include("delete_product.php");
     }

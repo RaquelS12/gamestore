@@ -34,7 +34,6 @@
     transform: scale(1.01);
 }
 
-
 .tile:nth-child(1) {
     background-color: rgb(123, 185, 187);
     height: 40%;

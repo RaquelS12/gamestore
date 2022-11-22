@@ -1,14 +1,15 @@
 console.log(document.cookie);
 window.onload = function(){
-    toggleVisibility(document.cookie);
+    toggleVisibility(getCookie('formname'));
 }
 
 function toggleVisibility(id) {
     let name = id + 'Form';
-    //toggleVisibilityHideAll();
+    console.log(name);
+    toggleVisibilityHideAll();
     if (document.getElementById(name).classList.contains("hidden")){
         document.getElementById(name).classList.remove("hidden");
-        document.cookie=id;
+        document.cookie='formname=' + id;
     } else{
         document.getElementById(name).classList.add("hidden");
 
@@ -30,3 +31,19 @@ function confirmMsg(id){
     }
         
 }
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  } 

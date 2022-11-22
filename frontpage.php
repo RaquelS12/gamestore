@@ -7,7 +7,7 @@
 <div id="gallery">
         <?php
         include("config.php");
-        $idproduct = array('101', '102', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115');
+        $idproduct = array('101', '102', '106', '107', '108', '103', '109', '111', '112', '113', '114', '115');
         
         foreach ($idproduct as $id){
             $query=$conn->query("select image_url from Image where idProductFK='$id'");
@@ -19,7 +19,6 @@
             <img class='item-image' src='{$image}'></a>
             </div>";
     }
-
 
         $conn->close();
         ?>
