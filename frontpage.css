@@ -12,7 +12,7 @@
     border-radius: 10%;
 }
 
-.tile > img{
+.item-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -20,11 +20,16 @@
     opacity: 0;
 }
 
-.tile:hover {
-    transform: scale(1.1);
+.tile > a {
+    height: 0;
 }
 
-.tile:hover > img{
+.tile:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tile:hover .item-link .item-image{
     opacity: 1;    
     transform: scale(1.01);
 }
@@ -41,8 +46,8 @@
 .tile:nth-child(2) {
     background-color: rgb(207, 130, 166);
     height: 25%;
-    width: 10%;
-    left: 40%;
+    width: 13%;
+    left: 42%;
     top: 20%;
 }
 
@@ -64,10 +69,10 @@
 
 .tile:nth-child(5) {
     background-color: rgb(206, 144, 149);
-    height: 22%;
+    height: 25%;
     width: 20%;
     left: 27%;
-    top: 50%;
+    top: 47%;
 }
 
 .tile:nth-child(6) {

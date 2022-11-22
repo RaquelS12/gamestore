@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Loja</title>
     <link rel="stylesheet" href="loja.css">
-    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="loja.js"></script>
 </head>
 <body>
     <h1>Produtos</h1>                  

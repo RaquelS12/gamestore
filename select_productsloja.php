@@ -12,7 +12,8 @@
 
         echo "<div id='product' class='flex-container-product'>";
         echo "<div id='productImage' name='productImage'>";
-        $images=$conn->query("select * from Image where idProductFK='$idproduct'");
+        echo "<a href='productdetails.php?id=$idproduct'>";
+        $images=$conn->query("select * from Image where idProductFK='$idproduct' limit 1");
         while($image=$images->fetch_assoc()){
             echo "<img src='{$image["image_url"]}'>";
         }

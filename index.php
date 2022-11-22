@@ -43,7 +43,11 @@
         <?php
             if(!empty($_GET["opcao"]))
                 include($_GET["opcao"].".php");
+            else
+                include("frontpage.php");
+
         ?>
     </main>
+
 </body>
 </html>
