@@ -12,7 +12,7 @@
         <?php if (!empty($_SESSION["userid"]) && $_SESSION["admin"]==1) 
          {  //login efetuado!
             ?>
-                <a href="index.php?opcao=loja">Produtos</a>
+                <a href="index.php?opcao=store">Produtos</a>
                 <a href="index.php?opcao=adminPage">Inserir Produtos</a>
                 <a href="index.php?opcao=logout">Logout</a>
             <?php
@@ -20,7 +20,7 @@
          else if (!empty($_SESSION["userid"]) && $_SESSION["admin"]==0) 
          {  //login efetuado!
             ?>
-                <a href="index.php?opcao=loja">Produtos</a>
+                <a href="index.php?opcao=store">Produtos</a>
                 <a href="index.php?opcao=logout">Logout</a>
             <?php
          }
@@ -28,7 +28,7 @@
          {  // sem login
             ?>
                 <a href="index.php?opcao=login">Login</a>
-                <a href="index.php?opcao=loja">Produtos</a>
+                <a href="index.php?opcao=store">Produtos</a>
             <?php
          }
         ?>
